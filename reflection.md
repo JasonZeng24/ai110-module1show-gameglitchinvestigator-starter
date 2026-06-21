@@ -41,13 +41,14 @@ The AI helped me structure the test file by suggesting clear test class organiza
 
 ## 4. What did you learn about Streamlit and state?
 
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Streamlit "reruns" happen every time a user interacts with the app (like clicking a button or typing in a text field). When a rerun happens, the entire script executes from top to bottom again. This is why you need `session_state` — it's a special dictionary that persists across reruns, keeping track of values like the secret number, score, and attempt count. Without session state, the secret number would reset to a new random value on every rerun, making the game impossible to play. I learned that you must explicitly initialize session state variables (like `if "secret" not in st.session_state`) to avoid errors, and that understanding reruns is the key to managing state correctly in Streamlit apps.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+**Habit to Reuse:** I want to consistently use automated testing early in debugging. Instead of manually running the game multiple times, I used pytest to create targeted test cases that verified each bug fix. This saved time and gave me confidence that the fixes actually worked. I'll apply this to future projects by writing tests before fixing bugs, making sure I have clear evidence that issues are resolved.
+
+**What I'd Do Differently:** Next time I work with AI on a coding task, I'll be more proactive about asking the AI to explain *why* a bug exists in the code, not just what the bug is. This would help me understand the root cause better from the start. I'd also ask the AI to suggest specific test cases upfront rather than waiting until after the fix to test it.
+
+**How This Changed My Thinking:** AI-generated code isn't inherently bad — it just needs the same scrutiny and testing as any code. This project showed me that AI can quickly identify logical errors through code analysis, but the human developer must verify those findings and ensure fixes are correct through testing. I learned to trust the analysis but verify the implementation.
