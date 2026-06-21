@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.20, pytest-7.4.4, pluggy-1.5.0 -- /Users/mac/opt/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/mac/Desktop/ai110project1
+plugins: anyio-4.12.1, langsmith-0.4.37
+collecting ... collected 12 items
+
+test/test_game_logic.py::TestCheckGuess::test_guess_too_high_gives_go_lower_hint PASSED [  8%]
+test/test_game_logic.py::TestCheckGuess::test_guess_too_low_gives_go_higher_hint PASSED [ 16%]
+test/test_game_logic.py::TestCheckGuess::test_guess_correct PASSED       [ 25%]
+test/test_game_logic.py::TestUpdateScore::test_too_high_always_deducts_points PASSED [ 33%]
+test/test_game_logic.py::TestUpdateScore::test_too_low_always_deducts_points PASSED [ 41%]
+test/test_game_logic.py::TestUpdateScore::test_scoring_is_symmetric PASSED [ 50%]
+test/test_game_logic.py::TestUpdateScore::test_win_gives_bonus_points PASSED [ 58%]
+test/test_game_logic.py::TestParseGuess::test_valid_integer PASSED       [ 66%]
+test/test_game_logic.py::TestParseGuess::test_invalid_input PASSED       [ 75%]
+test/test_game_logic.py::TestDifficultyRanges::test_easy_range PASSED    [ 83%]
+test/test_game_logic.py::TestDifficultyRanges::test_normal_range PASSED  [ 91%]
+test/test_game_logic.py::TestDifficultyRanges::test_hard_range PASSED    [100%]
+
+============================== 12 passed in 0.01s ==============================
